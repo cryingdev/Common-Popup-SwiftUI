@@ -15,14 +15,17 @@ struct CommonPopup<Content: View>: View {
     var showCloseButton: Bool = true
 
     var body: some View {
-        PopupBackground {
-            VStack(spacing: 0) {
-                if showCloseButton {
+        ZStack {
+            // 배경 레이어
+            Color.black.opacity(0.4)
+                .edgesIgnoringSafeArea(.all) // 전체 화면을 덮기
+            // 팝업 콘텐츠 레이어
+            PopupBackground {
+                VStack(spacing: 0) {
                     PopupHeader(title: title, onClose: onCancel)
+                    content
+                    PopupButtons(confirmTitle: "Confirm", cancelTitle: "Cancel", onConfirm: onConfirm, onCancel: onCancel)
                 }
-                content
-                    .padding()
-                PopupButtons(confirmTitle: "Confirm", cancelTitle: "Cancel", onConfirm: onConfirm, onCancel: onCancel)
             }
         }
     }
@@ -37,18 +40,12 @@ struct PopupBackground<Content: View>: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            VStack {
-                content
-            }
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 10)
-            .padding()
-            Spacer()
+            content
         }
-        .background(Color.black.opacity(0.4).edgesIgnoringSafeArea(.all))
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 10)
+        .padding(.horizontal, 20) // 팝업 양쪽에 패딩 추가
     }
 }
 
@@ -109,3 +106,4 @@ struct PopupViewModifier: ViewModifier {
             .animation(.easeInOut(duration: 0.3), value: isVisible)
     }
 }
+
