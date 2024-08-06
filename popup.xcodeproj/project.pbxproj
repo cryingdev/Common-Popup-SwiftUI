@@ -11,6 +11,7 @@
 		6DFFE7062C6230F30015FD46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFFE7052C6230F30015FD46 /* ContentView.swift */; };
 		6DFFE7082C6230F30015FD46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DFFE7072C6230F30015FD46 /* Assets.xcassets */; };
 		6DFFE70B2C6230F30015FD46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DFFE70A2C6230F30015FD46 /* Preview Assets.xcassets */; };
+		6DFFE7122C6233070015FD46 /* CommonPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFFE7112C6233070015FD46 /* CommonPopup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6DFFE7052C6230F30015FD46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DFFE7072C6230F30015FD46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DFFE70A2C6230F30015FD46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6DFFE7112C6233070015FD46 /* CommonPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				6DFFE7032C6230F30015FD46 /* popupApp.swift */,
 				6DFFE7052C6230F30015FD46 /* ContentView.swift */,
+				6DFFE7112C6233070015FD46 /* CommonPopup.swift */,
 				6DFFE7072C6230F30015FD46 /* Assets.xcassets */,
 				6DFFE7092C6230F30015FD46 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFFE7122C6233070015FD46 /* CommonPopup.swift in Sources */,
 				6DFFE7062C6230F30015FD46 /* ContentView.swift in Sources */,
 				6DFFE7042C6230F30015FD46 /* popupApp.swift in Sources */,
 			);
